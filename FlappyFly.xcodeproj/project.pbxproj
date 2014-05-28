@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F63BCED19363B5100509951 /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F63BCEC19363B5100509951 /* Goal.m */; };
 		9F80E08A1934E8F200A2A2CC /* Obstacle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F80E0891934E8F200A2A2CC /* Obstacle.m */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
@@ -56,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F63BCEB19363B5100509951 /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goal.h; sourceTree = "<group>"; };
+		9F63BCEC19363B5100509951 /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goal.m; sourceTree = "<group>"; };
 		9F80E0881934E8F200A2A2CC /* Obstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Obstacle.h; sourceTree = "<group>"; };
 		9F80E0891934E8F200A2A2CC /* Obstacle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Obstacle.m; sourceTree = "<group>"; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
@@ -129,6 +132,8 @@
 				B737893E1807617C0076A88C /* AppDelegate.m */,
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
+				9F63BCEB19363B5100509951 /* Goal.h */,
+				9F63BCEC19363B5100509951 /* Goal.m */,
 				9F80E0881934E8F200A2A2CC /* Obstacle.h */,
 				9F80E0891934E8F200A2A2CC /* Obstacle.m */,
 			);
@@ -323,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F63BCED19363B5100509951 /* Goal.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				9F80E08A1934E8F200A2A2CC /* Obstacle.m in Sources */,
