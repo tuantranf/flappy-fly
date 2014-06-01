@@ -8,9 +8,14 @@
 
 #import "MainScene.h"
 #import "Obstacle.h"
+#import "OALSimpleAudio.h"
 
 static const CGFloat firstObstaclePosition = 280.f;
 static const CGFloat distanceBetweenObstacles = 160.f;
+
+#define SFX_SWING @"sfx_wing.mp3"
+#define SFX_HIT @"sfx_hit.mp3"
+#define SFX_POINT @"sfx_point.mp3"
 
 typedef NS_ENUM(NSInteger, DrawingOrder) {
     DrawingOrderPipes,
@@ -43,6 +48,8 @@ typedef NS_ENUM(NSInteger, DrawingOrder) {
     
     NSInteger _points;
     CCLabelTTF *_scoreLabel;
+    
+    OALSimpleAudio *audio;
 }
 
 
@@ -55,7 +62,7 @@ typedef NS_ENUM(NSInteger, DrawingOrder) {
     _clouds = @[_cloud1, _cloud2];
     
     for (CCNode *ground in _grounds) {
-        // set collision txpe
+        // set collision type
         ground.physicsBody.collisionType = @"level";
         ground.zOrder = DrawingOrderGround;
     }
@@ -74,6 +81,12 @@ typedef NS_ENUM(NSInteger, DrawingOrder) {
     [self spawnNewObstacle];
     [self spawnNewObstacle];
     [self spawnNewObstacle];
+    
+    // access audio object
+    audio = [OALSimpleAudio sharedInstance];
+    // play sound effect
+    [audio preloadEffect:SFX_HIT];
+    [audio preloadEffect:SFX_POINT];
 }
 
 #pragma mark - Touch Handling
@@ -89,13 +102,14 @@ typedef NS_ENUM(NSInteger, DrawingOrder) {
 #pragma mark - CCPhysicsCollisionDelegate
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair hero:(CCNode *)hero level:(CCNode *)level {
+
     [self gameOver];
     return TRUE;
 }
 
 -(BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair hero:(CCNode *)hero goal:(CCNode *)goal {
     [goal removeFromParent];
-    
+    [audio playEffect:SFX_POINT];
     _points++;
     _scoreLabel.string = [NSString stringWithFormat:@"%d", _points];
     
@@ -106,6 +120,8 @@ typedef NS_ENUM(NSInteger, DrawingOrder) {
 
 - (void)gameOver {
     if (!_gameOver) {
+        [audio playEffect:SFX_HIT];
+//         NSLog(SFX_HIT);
         _scrollSpeed = 0.f;
         _gameOver = TRUE;
         _restartButton.visible = TRUE;

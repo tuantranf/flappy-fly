@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17F962C0193A3AEF00926A7A /* sfx_hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 17F962BD193A3AEE00926A7A /* sfx_hit.mp3 */; };
+		17F962C1193A3AEF00926A7A /* sfx_point.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 17F962BE193A3AEF00926A7A /* sfx_point.mp3 */; };
+		17F962C2193A3AEF00926A7A /* sfx_wing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 17F962BF193A3AEF00926A7A /* sfx_wing.mp3 */; };
 		9F63BCED19363B5100509951 /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F63BCEC19363B5100509951 /* Goal.m */; };
 		9F80E08A1934E8F200A2A2CC /* Obstacle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F80E0891934E8F200A2A2CC /* Obstacle.m */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
@@ -57,6 +60,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17F962BD193A3AEE00926A7A /* sfx_hit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sfx_hit.mp3; path = ../../../../Downloads/FlappyBird/Resources/sfx_hit.mp3; sourceTree = "<group>"; };
+		17F962BE193A3AEF00926A7A /* sfx_point.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sfx_point.mp3; path = ../../../../Downloads/FlappyBird/Resources/sfx_point.mp3; sourceTree = "<group>"; };
+		17F962BF193A3AEF00926A7A /* sfx_wing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = sfx_wing.mp3; path = ../../../../Downloads/FlappyBird/Resources/sfx_wing.mp3; sourceTree = "<group>"; };
 		9F63BCEB19363B5100509951 /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goal.h; sourceTree = "<group>"; };
 		9F63BCEC19363B5100509951 /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goal.m; sourceTree = "<group>"; };
 		9F80E0881934E8F200A2A2CC /* Obstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Obstacle.h; sourceTree = "<group>"; };
@@ -117,6 +123,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17F962BC193A393A00926A7A /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				17F962BD193A3AEE00926A7A /* sfx_hit.mp3 */,
+				17F962BE193A3AEF00926A7A /* sfx_point.mp3 */,
+				17F962BF193A3AEF00926A7A /* sfx_wing.mp3 */,
+			);
+			name = Audio;
+			sourceTree = "<group>";
+		};
 		9222E2B918734FF800A246C7 /* libs */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +225,7 @@
 		B77F1B4617B978D7009739AE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				17F962BC193A393A00926A7A /* Audio */,
 				B73789911807667A0076A88C /* Icons */,
 				B737893A180761570076A88C /* Published-iOS */,
 			);
@@ -256,7 +273,7 @@
 				ORGANIZATIONNAME = Apportable;
 				TargetAttributes = {
 					B77F1B2D17B978D7009739AE = {
-						DevelopmentTeam = SBVP8ED765;
+						DevelopmentTeam = 68YT5HB232;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 0;
@@ -307,6 +324,8 @@
 				B7378978180762440076A88C /* Default@2x.png in Resources */,
 				B71F5914188484E7003F4D28 /* iPad@2x.png in Resources */,
 				B71F5913188484E7003F4D28 /* iPad.png in Resources */,
+				17F962C2193A3AEF00926A7A /* sfx_wing.mp3 in Resources */,
+				17F962C0193A3AEF00926A7A /* sfx_hit.mp3 in Resources */,
 				B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */,
 				B71F5916188484E7003F4D28 /* iPhone-old@2x.png in Resources */,
 				B737893B180761570076A88C /* Published-iOS in Resources */,
@@ -318,6 +337,7 @@
 				B71F5918188484E7003F4D28 /* iPhone@2x.png in Resources */,
 				B7378977180762440076A88C /* Default.png in Resources */,
 				B71F5911188484E7003F4D28 /* iPad-old.png in Resources */,
+				17F962C1193A3AEF00926A7A /* sfx_point.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,8 +431,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nguyen Khang (9EAKUC7B4B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Nguyen Khang (9EAKUC7B4B)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -444,8 +464,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nguyen Khang (9EAKUC7B4B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Nguyen Khang (9EAKUC7B4B)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
